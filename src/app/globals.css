@@ -1,24 +1,33 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #0a0a0a;
-  --brand: #e10600;
-  --brand-dark: #b30500;
-  --brand-glow: rgba(225, 6, 0, 0.45);
-  --ink: #0a0a0a;
+  --canvas: #f4f3ef;
+  --background: #f4f3ef;
+  --foreground: #0c0c0c;
+  --brand: #d10a04;
+  --brand-bright: #ff1a12;
+  --brand-dark: #8f0602;
+  --brand-glow: rgba(209, 10, 4, 0.42);
+  --ink: #0c0c0c;
   --ink-soft: #141414;
-  --ink-deep: #050505;
-  --muted: #525252;
-  --muted-strong: #3d3d3d;
-  --muted-soft: #737373;
-  --gray-50: #fafafa;
-  --gray-100: #f5f5f5;
-  --gray-200: #e5e5e5;
-  --on-dark: #d4d4d4;
-  --on-dark-soft: #a3a3a3;
-  --on-dark-strong: #e5e5e5;
-  --line: rgba(10, 10, 10, 0.1);
+  --ink-deep: #030303;
+  --muted: #5c5c5c;
+  --muted-strong: #3a3a3a;
+  --muted-soft: #7a7a7a;
+  --gray-50: #fafaf8;
+  --gray-100: #efeee9;
+  --gray-200: #e0dfda;
+  --on-dark: #d6d6d6;
+  --on-dark-soft: #a8a8a8;
+  --on-dark-strong: #f0f0f0;
+  --line: rgba(12, 12, 12, 0.09);
+  --line-strong: rgba(12, 12, 12, 0.14);
+  --glass-light: rgba(255, 255, 255, 0.72);
+  --shadow-premium: 0 32px 64px -24px rgba(0, 0, 0, 0.45);
+  --shadow-card: 0 24px 48px -20px rgba(0, 0, 0, 0.12),
+    0 0 0 1px rgba(0, 0, 0, 0.04);
+  --shadow-card-dark: 0 28px 56px -16px rgba(0, 0, 0, 0.65),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.06);
 }
 
 @theme inline {
@@ -44,16 +53,17 @@
 
 html,
 body {
-  background: var(--background);
+  background: var(--canvas);
   color: var(--foreground);
   font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
-  font-size: 16.5px;
-  line-height: 1.6;
+  font-size: 17px;
+  line-height: 1.62;
   scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
 }
 
 p {
-  line-height: 1.65;
+  line-height: 1.68;
 }
 
 ::selection {
@@ -63,15 +73,16 @@ p {
 
 /* Scrollbar */
 ::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
+  width: 9px;
+  height: 9px;
 }
 ::-webkit-scrollbar-track {
-  background: #000;
+  background: var(--ink-deep);
 }
 ::-webkit-scrollbar-thumb {
-  background: #2a2a2a;
+  background: #3a3a3a;
   border-radius: 999px;
+  border: 2px solid var(--ink-deep);
 }
 ::-webkit-scrollbar-thumb:hover {
   background: var(--brand);
@@ -79,11 +90,18 @@ p {
 
 .font-display {
   font-family: var(--font-display), var(--font-sans), sans-serif;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.035em;
 }
 
 .text-balance {
   text-wrap: balance;
+}
+
+/* Premium surface — light cards on canvas */
+.surface-elevated {
+  background: #fff;
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--line);
 }
 
 /* Noise texture */
@@ -94,33 +112,33 @@ p {
 /* Dot pattern */
 .dot-grid {
   background-image: radial-gradient(
-    rgba(255, 255, 255, 0.08) 1px,
+    rgba(255, 255, 255, 0.07) 1px,
     transparent 1px
   );
-  background-size: 22px 22px;
+  background-size: 24px 24px;
 }
 .dot-grid-dark {
   background-image: radial-gradient(
-    rgba(10, 10, 10, 0.12) 1px,
+    rgba(12, 12, 12, 0.1) 1px,
     transparent 1px
   );
-  background-size: 22px 22px;
+  background-size: 24px 24px;
 }
 
 /* Checker grid */
 .grid-lines {
   background-image:
-    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
-  background-size: 72px 72px;
+    linear-gradient(to right, rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 80px 80px;
 }
 
 /* Radial brand glow */
 .radial-brand {
   background: radial-gradient(
-    circle at 50% 50%,
+    circle at 50% 45%,
     var(--brand-glow) 0%,
-    transparent 60%
+    transparent 55%
   );
 }
 
@@ -134,10 +152,10 @@ p {
   }
 }
 .marquee-track {
-  animation: marquee 32s linear infinite;
+  animation: marquee 36s linear infinite;
 }
 .marquee-slow {
-  animation: marquee 48s linear infinite;
+  animation: marquee 52s linear infinite;
 }
 
 /* Subtle float */
@@ -151,7 +169,7 @@ p {
   }
 }
 .float-y {
-  animation: float-y 6s ease-in-out infinite;
+  animation: float-y 6.5s ease-in-out infinite;
 }
 
 /* Heat shimmer (hero accent word) */
@@ -166,17 +184,17 @@ p {
 .shimmer-text {
   background: linear-gradient(
     90deg,
-    #ffffff 0%,
-    #ffffff 38%,
-    #e10600 50%,
-    #ffffff 62%,
-    #ffffff 100%
+    #f8f8f8 0%,
+    #ffffff 35%,
+    var(--brand-bright) 50%,
+    #ffffff 65%,
+    #f0f0f0 100%
   );
   background-size: 200% auto;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  animation: shimmer 5s linear infinite;
+  animation: shimmer 6s linear infinite;
 }
 
 /* Heat wave animation for hero visual */
@@ -184,15 +202,15 @@ p {
   0%,
   100% {
     transform: translateY(0) scaleY(1);
-    opacity: 0.55;
+    opacity: 0.5;
   }
   50% {
     transform: translateY(-4px) scaleY(1.04);
-    opacity: 0.8;
+    opacity: 0.75;
   }
 }
 .heatwave {
-  animation: heatwave 3.2s ease-in-out infinite;
+  animation: heatwave 3.4s ease-in-out infinite;
   transform-origin: bottom;
 }
 
@@ -204,11 +222,11 @@ p {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -4px;
-  height: 2px;
+  bottom: -5px;
+  height: 1px;
   width: 0;
-  background: var(--brand);
-  transition: width 0.3s ease;
+  background: linear-gradient(90deg, var(--brand), var(--brand-bright));
+  transition: width 0.35s cubic-bezier(0.22, 1, 0.36, 1);
 }
 .nav-link:hover::after {
   width: 100%;
@@ -221,9 +239,9 @@ p {
   background: linear-gradient(
     90deg,
     transparent 0%,
-    rgba(255, 255, 255, 0.15) 30%,
+    rgba(255, 255, 255, 0.12) 30%,
     var(--brand) 50%,
-    rgba(255, 255, 255, 0.15) 70%,
+    rgba(255, 255, 255, 0.12) 70%,
     transparent 100%
   );
 }
@@ -232,7 +250,13 @@ p {
 .section-num {
   font-family: var(--font-display);
   font-weight: 700;
-  letter-spacing: 0.2em;
-  font-size: 11px;
+  letter-spacing: 0.22em;
+  font-size: 10px;
   text-transform: uppercase;
+}
+
+/* Dark card premium edge */
+.edge-lit {
+  box-shadow: var(--shadow-card-dark);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }

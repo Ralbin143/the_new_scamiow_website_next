@@ -7,8 +7,9 @@ import clsx from "clsx";
 
 const links = [
   { label: "Products", href: "#products" },
-  { label: "Why SCAJ", href: "#why" },
+  { label: "Why SKAJ", href: "#why" },
   { label: "Process", href: "#process" },
+  { label: "Locations", href: "#service-areas" },
   { label: "Reviews", href: "#reviews" },
   { label: "Contact", href: "#contact" },
 ];
@@ -29,24 +30,24 @@ export default function Navbar() {
   return (
     <header
       className={clsx(
-        "fixed inset-x-0 top-0 z-50 transition-all duration-300",
+        "fixed inset-x-0 top-0 z-[100] transition-all duration-500 ease-out",
         scrolled
-          ? "backdrop-blur-xl bg-white/85 border-b border-black/5 shadow-[0_4px_30px_rgba(0,0,0,0.04)]"
+          ? "border-b border-[var(--line)] bg-[var(--glass-light)] shadow-[0_8px_40px_-12px_rgba(0,0,0,0.12)] backdrop-blur-2xl backdrop-saturate-150"
           : "bg-transparent",
       )}
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 md:px-8">
-        <Logo variant={onDark ? "light" : "dark"} />
+      <div className="mx-auto flex min-h-[3.75rem] max-w-7xl items-center justify-between px-5 py-3.5 md:min-h-[4.25rem] md:px-10 md:py-4">
+        <Logo variant={onDark ? "light" : "dark"} priority />
 
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav className="hidden items-center gap-9 md:flex">
           {links.map((l) => (
             <a
               key={l.href}
               href={l.href}
               className={clsx(
-                "nav-link text-sm font-medium transition-colors",
+                "nav-link text-[13px] font-semibold tracking-wide transition-colors",
                 onDark
-                  ? "text-neutral-100 hover:text-white"
+                  ? "text-white/85 hover:text-white"
                   : "text-[var(--muted-strong)] hover:text-[var(--ink)]",
               )}
             >
@@ -59,10 +60,10 @@ export default function Navbar() {
           <a
             href="#contact"
             className={clsx(
-              "group inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium transition-all",
+              "group inline-flex items-center gap-2 rounded-full px-6 py-3 text-[13px] font-semibold tracking-wide shadow-[0_12px_32px_-8px_rgba(209,10,4,0.45)] transition-all duration-300",
               onDark
-                ? "bg-[var(--brand)] text-white hover:bg-white hover:text-[var(--ink)]"
-                : "bg-[var(--ink)] text-white hover:bg-[var(--brand)]",
+                ? "bg-[var(--brand)] text-white hover:bg-white hover:text-[var(--ink)] hover:shadow-[0_16px_40px_-10px_rgba(255,255,255,0.25)]"
+                : "bg-[var(--ink)] text-white hover:bg-[var(--brand)] hover:shadow-[0_12px_32px_-8px_rgba(209,10,4,0.5)]",
             )}
           >
             Get a Quote
@@ -90,7 +91,7 @@ export default function Navbar() {
           open ? "max-h-96 opacity-100" : "max-h-0 opacity-0",
         )}
       >
-        <div className="mx-5 mb-4 rounded-2xl border border-black/5 bg-white p-4 shadow-xl">
+        <div className="mx-5 mb-4 rounded-2xl border border-[var(--line)] bg-white/95 p-4 shadow-[0_24px_48px_-20px_rgba(0,0,0,0.18)] backdrop-blur-xl">
           <div className="flex flex-col gap-1">
             {links.map((l) => (
               <a

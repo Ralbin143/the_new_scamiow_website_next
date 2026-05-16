@@ -30,7 +30,7 @@ const products: Product[] = [
       "Nano-ceramic multi-layer tech",
       "Signal-safe, zero interference",
       "Showroom-grade clarity",
-      "10-year SCAJ warranty",
+      "10-year SKAJ warranty",
     ],
   },
   {
@@ -46,7 +46,7 @@ const products: Product[] = [
       "Carbon-infused core",
       "Non-fading matte tone",
       "Excellent night visibility",
-      "10-year SCAJ warranty",
+      "10-year SKAJ warranty",
     ],
   },
   {
@@ -62,7 +62,7 @@ const products: Product[] = [
       "Balanced tint for daily use",
       "Scratch-resistant top coat",
       "Anti-glare finish",
-      "10-year SCAJ warranty",
+      "10-year SKAJ warranty",
     ],
   },
 ];
@@ -83,12 +83,13 @@ export default function Products() {
   return (
     <section
       id="products"
-      className="relative overflow-hidden bg-[var(--ink-deep)] py-24 text-white md:py-32"
+      className="relative overflow-hidden bg-[var(--ink-deep)] py-28 text-white md:py-36"
     >
-      <div className="absolute inset-0 grid-lines opacity-60 pointer-events-none" />
-      <div className="absolute left-1/2 top-10 h-80 w-[70%] -translate-x-1/2 rounded-full radial-brand blur-3xl opacity-50 pointer-events-none" />
+      <div className="absolute inset-0 grid-lines opacity-50 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60 pointer-events-none" />
+      <div className="absolute left-1/2 top-10 h-96 w-[72%] -translate-x-1/2 rounded-full radial-brand blur-3xl opacity-45 pointer-events-none" />
 
-      <div className="relative mx-auto max-w-7xl px-5 md:px-8">
+      <div className="relative mx-auto max-w-7xl px-5 md:px-10">
         {/* Header */}
         <div className="mb-14 grid grid-cols-1 items-end gap-8 md:grid-cols-12 md:gap-12">
           <div className="md:col-span-6">
@@ -120,10 +121,10 @@ export default function Products() {
                 <button
                   key={prod.name}
                   onClick={() => setActive(i)}
-                  className={`group relative overflow-hidden rounded-2xl border p-5 text-left transition-all ${
+                  className={`group relative overflow-hidden rounded-2xl border p-5 text-left transition-all duration-300 ${
                     active === i
-                      ? "border-[var(--brand)] bg-gradient-to-br from-[#1a0000] to-[#0a0000]"
-                      : "border-white/15 bg-white/[0.04] hover:border-white/40 hover:bg-white/[0.08]"
+                      ? "border-[var(--brand)]/80 bg-gradient-to-br from-[#140808] via-[#0a0505] to-[#030202] shadow-[0_24px_48px_-16px_rgba(209,10,4,0.25),inset_0_1px_0_0_rgba(255,255,255,0.06)]"
+                      : "border-white/12 bg-white/[0.035] hover:border-white/35 hover:bg-white/[0.07]"
                   }`}
                 >
                   <div className="flex items-center justify-between">
@@ -180,7 +181,7 @@ export default function Products() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -16 }}
                 transition={{ duration: 0.35 }}
-                className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-[#0f0f0f] to-black p-6 md:p-10"
+                className="relative overflow-hidden rounded-[28px] border border-white/[0.09] bg-gradient-to-br from-[#101010] via-[#060606] to-black p-6 shadow-[0_32px_64px_-20px_rgba(0,0,0,0.65),inset_0_1px_0_0_rgba(255,255,255,0.05)] md:p-11"
               >
                 {p.tier === "signature" && (
                   <div className="absolute right-6 top-6 rounded-full bg-[var(--brand)] px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-white">
@@ -315,7 +316,7 @@ export default function Products() {
         </div>
 
         {/* Coming soon */}
-        <div className="mt-20 rounded-3xl border border-white/10 bg-white/[0.03] p-6 md:p-10">
+        <div className="mt-24 rounded-[28px] border border-white/[0.09] bg-white/[0.035] p-6 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.05)] md:p-11">
           <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
             <div className="max-w-xl">
               <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-widest text-neutral-100">
@@ -327,12 +328,12 @@ export default function Products() {
               </h3>
               <p className="mt-3 text-base leading-[1.65] text-neutral-300">
                 Films are just the beginning. Join the early list for launch
-                pricing on every new SCAJ product.
+                pricing on every new SKAJ product.
               </p>
             </div>
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 rounded-full bg-[var(--brand)] px-6 py-3 text-sm font-semibold text-white hover:bg-white hover:text-[var(--ink)]"
+              className="inline-flex items-center gap-2 rounded-full bg-[var(--brand)] px-7 py-3.5 text-[13px] font-semibold tracking-wide text-white shadow-[0_12px_32px_-8px_rgba(209,10,4,0.5)] transition-all hover:bg-white hover:text-[var(--ink)] hover:shadow-[0_16px_40px_-10px_rgba(255,255,255,0.15)]"
             >
               Notify me
               <ArrowUpRight className="h-4 w-4" />
@@ -343,7 +344,7 @@ export default function Products() {
             {upcoming.map((u) => (
               <div
                 key={u.name}
-                className="flex items-center justify-between rounded-2xl border border-white/15 bg-white/[0.05] px-4 py-3.5 text-[15px] font-medium text-neutral-100 transition-colors hover:border-[var(--brand)]/50 hover:bg-white/[0.08] hover:text-white"
+                className="flex items-center justify-between rounded-2xl border border-white/12 bg-white/[0.04] px-4 py-3.5 text-[15px] font-medium text-neutral-100 transition-all hover:border-[var(--brand)]/45 hover:bg-white/[0.08] hover:text-white"
               >
                 <span>{u.name}</span>
                 <span className="rounded-full bg-[var(--brand)]/20 px-2.5 py-0.5 text-[11px] font-semibold text-[var(--brand)]">
@@ -360,7 +361,7 @@ export default function Products() {
 
 function Metric({ label, value }: { label: string; value: string }) {
   return (
-    <div className="rounded-xl border border-white/15 bg-white/[0.05] p-4">
+    <div className="rounded-xl border border-white/12 bg-white/[0.04] p-4 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.05)]">
       <div className="font-display text-2xl font-bold text-white">{value}</div>
       <div className="mt-1 text-[10px] font-semibold uppercase tracking-widest text-neutral-300">
         {label}

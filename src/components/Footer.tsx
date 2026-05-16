@@ -26,14 +26,15 @@ const LinkedinIcon = (p: React.SVGProps<SVGSVGElement>) => (
 export default function Footer() {
   return (
     <footer className="relative overflow-hidden bg-[var(--ink-deep)] text-white">
-      <div className="absolute inset-0 dot-grid opacity-40 pointer-events-none" />
-      <div className="pointer-events-none absolute -top-20 right-1/4 h-72 w-72 rounded-full bg-[var(--brand)]/15 blur-3xl" />
+      <div className="absolute inset-0 dot-grid opacity-35 pointer-events-none" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-white/[0.03]" />
+      <div className="pointer-events-none absolute -top-20 right-1/4 h-80 w-80 rounded-full bg-[var(--brand)]/12 blur-3xl" />
 
       {/* Big wordmark */}
-      <div className="relative border-b border-white/10">
-        <div className="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-24">
+      <div className="relative border-b border-white/[0.08]">
+        <div className="mx-auto max-w-7xl px-5 py-20 md:px-10 md:py-28">
           <h2 className="font-display text-[18vw] font-bold leading-[0.85] tracking-tighter text-white/5 md:text-[14vw]">
-            SCAJ<span className="text-[var(--brand)]/80">.</span>
+            SKAJ<span className="text-[var(--brand)]/80">.</span>
           </h2>
           <div className="mt-[-8vw] grid grid-cols-1 items-end gap-6 md:mt-[-6vw] md:grid-cols-2">
             <p className="font-display max-w-xl text-balance text-2xl font-bold leading-tight md:text-4xl">
@@ -46,7 +47,7 @@ export default function Footer() {
             <div className="md:justify-self-end">
               <a
                 href="#contact"
-                className="inline-flex items-center gap-2 rounded-full bg-[var(--brand)] px-6 py-3 text-sm font-semibold text-white hover:bg-white hover:text-[var(--ink)]"
+                className="inline-flex items-center gap-2 rounded-full bg-[var(--brand)] px-7 py-3.5 text-[13px] font-semibold tracking-wide text-white shadow-[0_12px_32px_-8px_rgba(209,10,4,0.45)] transition-all hover:bg-white hover:text-[var(--ink)] hover:shadow-[0_16px_40px_-10px_rgba(255,255,255,0.12)]"
               >
                 Book a free consultation →
               </a>
@@ -55,12 +56,12 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="relative mx-auto max-w-7xl px-5 py-14 md:px-8">
+      <div className="relative mx-auto max-w-7xl px-5 py-16 md:px-10 md:py-20">
         <div className="grid grid-cols-2 gap-10 md:grid-cols-4 lg:grid-cols-5">
           <div className="col-span-2 lg:col-span-2">
-            <Logo variant="light" />
+            <Logo variant="light" size="lg" />
             <p className="mt-4 max-w-xs text-[15px] leading-[1.6] text-neutral-300">
-              Based in Kochi, obsessed with every SCAJ film we install.
+              Based in Kochi, obsessed with every SKAJ film we install.
             </p>
             <div className="mt-6 flex items-center gap-2">
               {[InstagramIcon, FacebookIcon, YoutubeIcon, LinkedinIcon].map(
@@ -90,7 +91,7 @@ export default function Footer() {
           <FooterCol
             title="Company"
             links={[
-              { label: "Why SCAJ", href: "#why" },
+              { label: "Why SKAJ", href: "#why" },
               { label: "Process", href: "#process" },
               { label: "Reviews", href: "#reviews" },
               { label: "Contact", href: "#contact" },
@@ -109,7 +110,7 @@ export default function Footer() {
 
         <div className="mt-12 flex flex-col items-start justify-between gap-4 border-t border-white/15 pt-6 text-[13px] text-neutral-400 md:flex-row md:items-center">
           <div>
-            © {new Date().getFullYear()} SCAJ Automotive. Crafted with
+            © {new Date().getFullYear()} SKAJ Automotive. Crafted with
             obsession in Kochi.
           </div>
           <div className="flex items-center gap-5">

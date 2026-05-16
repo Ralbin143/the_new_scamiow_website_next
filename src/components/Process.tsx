@@ -14,7 +14,7 @@ const steps = [
     n: "01",
     icon: CalendarCheck,
     title: "Book your slot",
-    desc: "Pick a film, a date, and your preferred SCAJ studio — takes 60 seconds online or over a quick call.",
+    desc: "Pick a film, a date, and your preferred SKAJ studio — takes 60 seconds online or over a quick call.",
     time: "60 sec",
   },
   {
@@ -42,10 +42,10 @@ const steps = [
 
 export default function Process() {
   return (
-    <section id="process" className="relative overflow-hidden py-24 md:py-32">
-      <div className="absolute inset-0 -z-10 dot-grid-dark opacity-80" />
+    <section id="process" className="relative overflow-hidden py-28 md:py-36">
+      <div className="absolute inset-0 -z-10 dot-grid-dark opacity-65" />
 
-      <div className="mx-auto max-w-7xl px-5 md:px-8">
+      <div className="mx-auto max-w-7xl px-5 md:px-10">
         {/* Header */}
         <div className="mb-14 grid grid-cols-1 items-end gap-8 md:grid-cols-12">
           <div className="md:col-span-6">
@@ -60,7 +60,7 @@ export default function Process() {
           </div>
           <div className="md:col-span-5 md:col-start-8">
             <p className="text-lg leading-[1.65] text-[var(--muted-strong)]">
-              Every SCAJ install is a four-step ritual. No surprises, no
+              Every SKAJ install is a four-step ritual. No surprises, no
               upselling, no rushed jobs — just a clean, precise finish you can
               feel the moment you sit down.
             </p>
@@ -95,7 +95,7 @@ export default function Process() {
                       i % 2 === 0 ? "ml-auto" : "mr-auto"
                     }`}
                   >
-                    <div className="inline-flex items-center gap-3 rounded-full border border-black/10 bg-white px-4 py-2 shadow-sm">
+                    <div className="inline-flex items-center gap-3 rounded-full border border-[var(--line)] bg-white px-4 py-2 shadow-[0_12px_32px_-12px_rgba(0,0,0,0.1)]">
                       <div className="flex h-9 w-9 items-center justify-center rounded-full bg-[var(--ink)] text-white">
                         <s.icon className="h-4 w-4" />
                       </div>
@@ -117,7 +117,7 @@ export default function Process() {
 
                 {/* Content card */}
                 <div className={i % 2 === 0 ? "md:pl-12" : "md:pr-12"}>
-                  <div className="group relative overflow-hidden rounded-3xl border border-black/10 bg-white p-6 transition-all hover:-translate-y-1 hover:border-[var(--brand)]/40 hover:shadow-[0_20px_40px_-15px_rgba(225,6,0,0.2)] md:p-8">
+                  <div className="group relative overflow-hidden rounded-[28px] border border-[var(--line)] bg-white p-6 shadow-[0_8px_30px_-12px_rgba(0,0,0,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-[var(--brand)]/35 hover:shadow-[0_28px_48px_-20px_rgba(209,10,4,0.15)] md:p-9">
                     <div className="flex items-center gap-4 md:hidden">
                       <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[var(--ink)] text-white">
                         <s.icon className="h-5 w-5" />
@@ -154,7 +154,7 @@ export default function Process() {
         <div className="mt-16 flex justify-center">
           <a
             href="#contact"
-            className="group inline-flex items-center gap-2 rounded-full bg-[var(--ink)] px-7 py-4 text-sm font-semibold text-white hover:bg-[var(--brand)]"
+            className="group inline-flex items-center gap-2 rounded-full bg-[var(--ink)] px-8 py-4 text-[13px] font-semibold tracking-wide text-white shadow-[0_16px_40px_-12px_rgba(0,0,0,0.35)] transition-all hover:bg-[var(--brand)] hover:shadow-[0_20px_48px_-12px_rgba(209,10,4,0.45)]"
           >
             Book your install
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />

@@ -1,6 +1,6 @@
-# SCAJ — Automobile Accessories Website
+# SKAJ — Automobile Accessories Website
 
-A modern, stunning marketing site for **SCAJ**, a premium automobile accessories brand. The flagship product is a **car cooling film**; the site is built so future accessories can be added with minimal effort.
+A modern, stunning marketing site for **SKAJ**, a premium automobile accessories brand. The flagship product is a **car cooling film**; the site is built so future accessories can be added with minimal effort.
 
 Brand palette: **white · black · red** (`#ffffff`, `#0a0a0a`, `#e10600`).
 
@@ -10,7 +10,7 @@ Built with **Next.js 16 (App Router)**, **TypeScript**, **Tailwind CSS v4**, **F
 
 - Hero with animated cooling-film visual and live trust stats
 - Brand marquee
-- Six-point benefits grid ("Why SCAJ")
+- Six-point benefits grid ("Why SKAJ")
 - Three-product lineup + "Coming soon" accessory roadmap
 - Stats / social-proof band
 - 4-step install process
@@ -71,4 +71,4 @@ Change those and the entire site rebrands.
 
 ## License
 
-© SCAJ Automotive. All rights reserved.
+© SKAJ Automotive. All rights reserved.

@@ -6,7 +6,7 @@ import { Quote, Star } from "lucide-react";
 const featured = {
   name: "Sameer Khan",
   car: "BMW 3 Series · Nano-Ceramic 80",
-  text: "I'd tried three big tinting brands before SCAJ. This is on another level — the clarity at night is unreal, zero signal interference with FASTag, and the cabin feels almost chilled compared to before. Worth every rupee.",
+  text: "I'd tried three big tinting brands before SKAJ. This is on another level — the clarity at night is unreal, zero signal interference with FASTag, and the cabin feels almost chilled compared to before. Worth every rupee.",
   rating: 5,
 };
 
@@ -14,7 +14,7 @@ const reviews = [
   {
     name: "Arjun Menon",
     car: "Hyundai Creta · Nano-Ceramic 80",
-    text: "Mid-day Kerala heat used to be unbearable. After SCAJ, the cabin feels 10°C cooler and AC hits in seconds.",
+    text: "Mid-day Kerala heat used to be unbearable. After SKAJ, the cabin feels 10°C cooler and AC hits in seconds.",
     rating: 5,
   },
   {
@@ -41,25 +41,26 @@ export default function Testimonials() {
   return (
     <section
       id="reviews"
-      className="relative bg-[var(--ink-deep)] py-24 text-white md:py-32"
+      className="relative bg-[var(--ink-deep)] py-28 text-white md:py-36"
     >
-      <div className="absolute inset-0 dot-grid opacity-50 pointer-events-none" />
+      <div className="absolute inset-0 dot-grid opacity-45 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/40 pointer-events-none" />
 
-      <div className="relative mx-auto max-w-7xl px-5 md:px-8">
+      <div className="relative mx-auto max-w-7xl px-5 md:px-10">
         {/* Header */}
         <div className="mb-14 grid grid-cols-1 items-end gap-8 md:grid-cols-12">
           <div className="md:col-span-7">
             <span className="section-num text-[var(--brand)]">
-              06 · Loved by drivers
+              07 · Loved by drivers
             </span>
             <h2 className="font-display mt-4 text-balance text-4xl font-bold leading-[1.02] md:text-[56px]">
-              The SCAJ difference,
+              The SKAJ difference,
               <br />
               <span className="text-[var(--brand)]">in their own words.</span>
             </h2>
           </div>
           <div className="md:col-span-4 md:col-start-9">
-            <div className="flex items-center gap-3 rounded-full border border-white/20 bg-white/10 px-4 py-2 w-fit">
+            <div className="flex w-fit items-center gap-3 rounded-full border border-white/15 bg-white/[0.07] px-5 py-2.5 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1)] backdrop-blur-md">
               <div className="flex items-center gap-0.5">
                 {[0, 1, 2, 3, 4].map((i) => (
                   <Star
@@ -81,7 +82,7 @@ export default function Testimonials() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.6 }}
-          className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-[#1a0000] via-[#0a0000] to-black p-8 md:p-14"
+          className="relative overflow-hidden rounded-[28px] border border-white/[0.09] bg-gradient-to-br from-[#120606] via-[#060303] to-black p-8 shadow-[0_32px_64px_-20px_rgba(0,0,0,0.55),inset_0_1px_0_0_rgba(255,255,255,0.06)] md:p-14"
         >
           <div className="absolute -right-20 -top-20 h-80 w-80 rounded-full bg-[var(--brand)]/30 blur-3xl" />
           <div className="relative grid grid-cols-1 items-center gap-8 md:grid-cols-12 md:gap-12">
@@ -114,7 +115,7 @@ export default function Testimonials() {
               </div>
             </div>
             <div className="md:col-span-4">
-              <div className="rounded-2xl border border-white/15 bg-white/[0.06] p-6 backdrop-blur">
+              <div className="rounded-2xl border border-white/12 bg-white/[0.05] p-6 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.06)] backdrop-blur-xl">
                 <div className="text-[10px] font-semibold uppercase tracking-[0.25em] text-neutral-300">
                   Verified result
                 </div>
@@ -137,7 +138,7 @@ export default function Testimonials() {
                     Installed at
                   </div>
                   <div className="font-display mt-1 text-sm font-semibold">
-                    SCAJ Studio Kochi
+                    SKAJ Studio Kochi
                   </div>
                 </div>
               </div>
@@ -154,7 +155,7 @@ export default function Testimonials() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.5, delay: i * 0.06 }}
-              className="group relative flex flex-col rounded-2xl border border-white/15 bg-white/[0.05] p-6 transition-all hover:-translate-y-1 hover:border-[var(--brand)]/40 hover:bg-white/[0.08]"
+              className="group relative flex flex-col rounded-[22px] border border-white/12 bg-white/[0.04] p-6 transition-all duration-300 hover:-translate-y-1 hover:border-[var(--brand)]/40 hover:bg-white/[0.07] hover:shadow-[0_24px_48px_-16px_rgba(209,10,4,0.2)]"
             >
               <div className="flex items-center gap-0.5">
                 {Array.from({ length: r.rating }).map((_, k) => (

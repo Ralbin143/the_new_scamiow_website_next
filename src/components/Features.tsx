@@ -15,14 +15,14 @@ export default function Features() {
   return (
     <section
       id="why"
-      className="relative mx-auto max-w-7xl px-5 py-24 md:px-8 md:py-32"
+      className="relative mx-auto max-w-7xl px-5 py-28 md:px-10 md:py-36"
     >
-      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-black/10 to-transparent" />
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[var(--line-strong)] to-transparent" />
 
       {/* Header */}
       <div className="mb-14 grid grid-cols-1 gap-8 md:grid-cols-12 md:gap-12">
         <div className="md:col-span-4">
-          <span className="section-num text-[var(--brand)]">02 · Why SCAJ</span>
+          <span className="section-num text-[var(--brand)]">02 · Why SKAJ</span>
           <h2 className="font-display mt-4 text-balance text-4xl font-bold leading-[1.02] md:text-[56px]">
             Engineered to the{" "}
             <span className="text-[var(--brand)]">last micron</span>.
@@ -30,7 +30,7 @@ export default function Features() {
         </div>
         <div className="md:col-span-7 md:col-start-6">
           <p className="text-lg leading-[1.65] text-[var(--muted-strong)] md:text-xl">
-            Every SCAJ film is born in a precision lab, tuned for punishing
+            Every SKAJ film is born in a precision lab, tuned for punishing
             Indian summers, and finished by certified installers. Six reasons
             your car deserves one.
           </p>
@@ -38,14 +38,14 @@ export default function Features() {
       </div>
 
       {/* Bento grid */}
-      <div className="grid auto-rows-[minmax(200px,auto)] grid-cols-1 gap-4 md:grid-cols-4 md:gap-5">
+      <div className="grid auto-rows-[minmax(200px,auto)] grid-cols-1 gap-5 md:grid-cols-4 md:gap-6">
         {/* Big featured */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="group relative col-span-1 flex flex-col justify-between overflow-hidden rounded-3xl bg-[var(--ink)] p-7 text-white md:col-span-2 md:row-span-2 md:p-10"
+          className="group relative col-span-1 flex flex-col justify-between overflow-hidden rounded-[28px] border border-white/[0.08] bg-[var(--ink)] p-7 text-white shadow-[0_32px_64px_-24px_rgba(0,0,0,0.45),inset_0_1px_0_0_rgba(255,255,255,0.06)] md:col-span-2 md:row-span-2 md:p-11"
         >
           <div className="absolute inset-0 dot-grid opacity-60" />
           <div className="absolute -right-20 -top-20 h-80 w-80 rounded-full bg-[var(--brand)]/30 blur-3xl" />
@@ -94,7 +94,7 @@ export default function Features() {
                   fontFamily="sans-serif"
                   letterSpacing="2"
                 >
-                  WITHOUT SCAJ
+                  WITHOUT SKAJ
                 </text>
                 <rect
                   x="20"
@@ -113,7 +113,7 @@ export default function Features() {
                   fontFamily="sans-serif"
                   letterSpacing="2"
                 >
-                  WITH SCAJ NANO-CERAMIC 80
+                  WITH SKAJ NANO-CERAMIC 80
                 </text>
                 <rect
                   x="20"
@@ -162,7 +162,7 @@ export default function Features() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.25 }}
-          className="group relative col-span-1 flex items-center justify-between gap-6 overflow-hidden rounded-3xl border border-black/10 bg-white p-7 md:col-span-4"
+          className="group relative col-span-1 flex items-center justify-between gap-6 overflow-hidden rounded-[28px] border border-[var(--line)] bg-white p-7 shadow-[0_24px_48px_-20px_rgba(0,0,0,0.08)] md:col-span-4 md:p-9"
         >
           <div>
             <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--brand)] text-white">
@@ -177,7 +177,7 @@ export default function Features() {
           </div>
           <a
             href="#products"
-            className="hidden shrink-0 items-center gap-2 rounded-full border border-black/10 bg-white px-5 py-3 text-sm font-semibold hover:border-[var(--ink)] md:inline-flex"
+            className="hidden shrink-0 items-center gap-2 rounded-full border border-[var(--line)] bg-[var(--gray-50)] px-6 py-3.5 text-[13px] font-semibold tracking-wide shadow-sm transition-colors hover:border-[var(--ink)] hover:bg-white md:inline-flex"
           >
             See the films
             <ArrowUpRight className="h-4 w-4" />
@@ -208,10 +208,10 @@ function FeatureTile({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay }}
-      className={`group relative flex flex-col justify-between overflow-hidden rounded-3xl p-6 transition-all hover:-translate-y-1 ${
+      className={`group relative flex flex-col justify-between overflow-hidden rounded-[26px] p-7 transition-all duration-300 hover:-translate-y-1 ${
         isDark
-          ? "border border-black/10 bg-white hover:border-[var(--brand)]/40 hover:shadow-[0_20px_40px_-15px_rgba(225,6,0,0.2)]"
-          : "border border-black/10 bg-[var(--ink)] text-white hover:border-[var(--brand)]"
+          ? "border border-[var(--line)] bg-white shadow-[0_8px_30px_-12px_rgba(0,0,0,0.06)] hover:border-[var(--brand)]/35 hover:shadow-[0_28px_48px_-20px_rgba(209,10,4,0.18)]"
+          : "border border-white/[0.1] bg-[var(--ink)] text-white shadow-[0_24px_48px_-20px_rgba(0,0,0,0.35)] hover:border-[var(--brand)]/50"
       }`}
     >
       <div
